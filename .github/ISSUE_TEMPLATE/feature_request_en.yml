@@ -1,0 +1,34 @@
+name: Feature request (English)
+description: Suggest an idea for this project
+labels: ['enhancement']
+assignees: 
+  - XerXes777
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your feature suggestion! Please describe what you need and how it would improve the project.
+  - type: checkboxes
+    id: existing-feature
+    attributes:
+      label: Already discussed?
+      description: Please make sure this feature hasn’t already been suggested.
+      options:
+        - label: I have searched existing issues and pull requests
+          required: true
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What do you want to see?
+      description: Describe the feature or improvement you’d like to see added.
+      placeholder: I’d like to have a button that lets me [...]
+    validations:
+      required: true
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Why is it useful?
+      description: What problem does it solve, or what benefit does it bring?
+      placeholder: This would help me because [...]
+    validations:
+      required: true

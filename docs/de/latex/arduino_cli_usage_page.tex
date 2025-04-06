@@ -1,0 +1,127 @@
+\chapter{Arduino CLI Usage}
+\hypertarget{arduino_cli_usage_page}{}\label{arduino_cli_usage_page}\index{Arduino CLI Usage@{Arduino CLI Usage}}
+Anleitung zum Kompilieren und Hochladen mit Arduino CLI.\hypertarget{arduino_cli_usage_page_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Hinweis für Arduino-\/\+IDE-\/\+Nutzer}{Hinweis für Arduino-\/\+IDE-\/\+Nutzer}}\label{arduino_cli_usage_page_autotoc_md4}
+Wer lieber eine grafische Oberfläche nutzt, kann weiterhin die Arduino IDE verwenden. ~\newline
+ Diese Anleitung richtet sich an Fortgeschrittene, die ohne Editor oder automatisiert arbeiten möchten.\hypertarget{arduino_cli_usage_page_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Einstieg mit der Arduino CLI}{Einstieg mit der Arduino CLI}}\label{arduino_cli_usage_page_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Projekt herunterladen\+:}} Entpacke das Archiv nach\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C:\(\backslash\)Users\(\backslash\)<DeinBenutzername>\(\backslash\)Documents\(\backslash\)Arduino}
+
+\end{DoxyCode}
+
+\item {\bfseries{Terminal öffnen\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily Win + R}, {\ttfamily cmd} eingeben und {\ttfamily Enter}.
+\item Zum Projektordner navigieren\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino"{}}}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{Arduino CLI konfigurieren\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ config\ init\ -\/-\/overwrite}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.data\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.downloads\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)temp"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.user\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.builtin.libraries\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)libraries"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ library.enable\_unsafe\_install\ \textcolor{keyword}{true}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Konfiguration prüfen\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ config\ dump}
+
+\end{DoxyCode}
+
+\item {\bfseries{Core-\/\+Index aktualisieren\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ core\ update-\/index}
+
+\end{DoxyCode}
+
+\item {\bfseries{Angeschlossene Boards anzeigen\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ board\ list}
+
+\end{DoxyCode}
+
+
+Beispielausgabe\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Port\ Protokoll\ Typ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Platinenname\ FQBN\ Kern}
+\DoxyCodeLine{COM5\ serial\ \ \ \ Serial\ Port\ (USB)\ Unbekannt}
+
+\end{DoxyCode}
+
+\item {\bfseries{Projekt kompilieren\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Firmware hochladen\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ upload\ YourProjectName\ -\/p\ COM5\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/input-\/dir\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Seriellen Monitor öffnen\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ monitor\ YourProjectName\ -\/p\ COM5\ -\/-\/config\ 115200}
+
+\end{DoxyCode}
+
+\item {\bfseries{Upload und Monitor kombinieren\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}\ \&\ arduino-\/cli\ upload\ YourProjectName\ -\/p\ COM5\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/input-\/dir\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+
+Mit {\ttfamily Strg + C} beenden.
+\end{DoxyEnumerate}\hypertarget{arduino_cli_usage_page_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Hinweise}{Hinweise}}\label{arduino_cli_usage_page_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Stelle sicher, dass das Board angeschlossen ist und Treiber installiert sind.
+\item Ersetze {\ttfamily COM5} mit dem passenden Anschluss.
+\item Die CLI-\/\+Konfiguration muss nur einmal durchgeführt werden.
+\end{DoxyItemize}\hypertarget{arduino_cli_usage_page_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{⚠️ Hinweis\+: Veraltete Bibliotheken im Library Manager}{⚠️ Hinweis\+: Veraltete Bibliotheken im Library Manager}}\label{arduino_cli_usage_page_autotoc_md7}
+Einige Arduino-\/\+Bibliotheken im Library Manager sind veraltet. ~\newline
+ Du kannst die aktuellen Versionen direkt von Git\+Hub installieren\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ lib\ install\ -\/-\/git-\/url\ https:\textcolor{comment}{//github.com/ESP32Async/ESPAsyncWebServer.git\#v3.7.6}}
+\DoxyCodeLine{arduino-\/cli\ lib\ install\ -\/-\/git-\/url\ https:\textcolor{comment}{//github.com/ESP32Async/AsyncTCP.git\#v3.3.8}}
+
+\end{DoxyCode}
+
+
+Diese Bibliotheken werden hier gespeichert\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)libraries}
+
+\end{DoxyCode}
+
+
+Damit Arduino CLI sie im Profil-\/basierten Build (sketch.\+yaml) nutzt\+:
+\begin{DoxyEnumerate}
+\item Zuerst einmalig das Projekt kompilieren, damit Arduino CLI die internen Lib-\/\+Ordner anlegt\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item Danach die jeweiligen {\ttfamily src/}-\/Ordner in diesen Verzeichnissen manuell ersetzen\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)internal\(\backslash\)ESPAsyncWebServer...}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)internal\(\backslash\)AsyncTCP...}
+
+\end{DoxyCode}
+ Kopiere den Inhalt der neuen Git\+Hub-\/\+Versionen in diese Verzeichnisse. Die neuen Versionen werden dann beim nächsten Build verwendet. 
+\end{DoxyEnumerate}
