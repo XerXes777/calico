@@ -1,0 +1,34 @@
+name: Feature-Wunsch (Deutsch)
+description: Schlage eine Idee oder Verbesserung für dieses Projekt vor
+labels: ['enhancement']
+assignees: 
+  - XerXes777
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deinen Vorschlag! Beschreibe bitte kurz, was du brauchst und warum es hilfreich wäre.
+  - type: checkboxes
+    id: existing-feature
+    attributes:
+      label: Schon vorhanden?
+      description: Bitte prüfe, ob dieses Feature schon vorgeschlagen wurde.
+      options:
+        - label: Ich habe nach bestehenden Issues und Pull Requests gesucht
+          required: true
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Was soll hinzugefügt werden?
+      description: Beschreibe die Funktion oder Verbesserung, die du dir wünschst.
+      placeholder: Ich hätte gerne eine Schaltfläche, mit der man [...]
+    validations:
+      required: true
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Warum ist das nützlich?
+      description: Welches Problem wird dadurch gelöst oder welcher Nutzen entsteht?
+      placeholder: Das hilft mir, weil [...]
+    validations:
+      required: true

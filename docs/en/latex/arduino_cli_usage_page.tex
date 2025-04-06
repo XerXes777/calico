@@ -1,0 +1,92 @@
+\chapter{Arduino CLI Usage}
+\hypertarget{arduino_cli_usage_page}{}\label{arduino_cli_usage_page}\index{Arduino CLI Usage@{Arduino CLI Usage}}
+Guide for compiling and uploading using Arduino CLI.\hypertarget{arduino_cli_usage_page_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{Note for Arduino IDE Users}{Note for Arduino IDE Users}}\label{arduino_cli_usage_page_autotoc_md0}
+If you prefer a graphical interface, you can still use the Arduino IDE. ~\newline
+ This guide is intended for advanced users who want to automate the workflow or work without an editor.\hypertarget{arduino_cli_usage_page_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Getting Started with Arduino CLI}{Getting Started with Arduino CLI}}\label{arduino_cli_usage_page_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Download the Project\+:}} Extract the archive into\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C:\(\backslash\)Users\(\backslash\)<YourUsername>\(\backslash\)Documents\(\backslash\)Arduino}
+
+\end{DoxyCode}
+
+\item {\bfseries{Open Terminal\+:}}
+\begin{DoxyItemize}
+\item Press {\ttfamily Win + R}, type {\ttfamily cmd}, and press {\ttfamily Enter}.
+\item Navigate to the project folder\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino"{}}}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\item {\bfseries{Configure Arduino CLI\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ config\ init\ -\/-\/overwrite}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.data\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.downloads\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)temp"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.user\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ directories.builtin.libraries\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)libraries"{}}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Check Configuration\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ config\ dump}
+
+\end{DoxyCode}
+
+\item {\bfseries{Update Core Index\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ core\ update-\/index}
+
+\end{DoxyCode}
+
+\item {\bfseries{List Connected Boards\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ board\ list}
+
+\end{DoxyCode}
+
+
+Example output\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Port\ Protokoll\ Typ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Platinenname\ FQBN\ Kern}
+\DoxyCodeLine{COM5\ serial\ \ \ \ Serial\ Port\ (USB)\ Unknown}
+
+\end{DoxyCode}
+
+\item {\bfseries{Compile the Project\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Upload the Firmware\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ upload\ YourProjectName\ -\/p\ COM5\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/input-\/dir\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item {\bfseries{Open Serial Monitor\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ monitor\ YourProjectName\ -\/p\ COM5\ -\/-\/config\ 115200}
+
+\end{DoxyCode}
+
+\item {\bfseries{Combine Upload and Monitor\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}\ \&\ arduino-\/cli\ upload\ YourProjectName\ -\/p\ COM5\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/input-\/dir\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+
+Press {\ttfamily Ctrl + C} to exit.
+\end{DoxyEnumerate}\hypertarget{arduino_cli_usage_page_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Notes}{Notes}}\label{arduino_cli_usage_page_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Make sure the board is connected and drivers are installed.
+\item Replace {\ttfamily COM5} with the correct port.
+\item Initial configuration is only needed once per environment. 
+\end{DoxyItemize}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Language</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #000;
+      --box-hover: #ddd;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #f4f4f4;
+        --box-hover: #1f1f1f;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 60px;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .lang-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .lang-option {
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 20px;
+      transition: transform 0.2s, background-color 0.2s;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .lang-option:hover {
+      transform: scale(1.05);
+      background-color: var(--box-hover);
+    }
+
+    .lang-option img {
+      width: 80px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    @media (max-width: 600px) {
+      .lang-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Bitte wähle deine Sprache<br>Select your language</h1>
+  <div class="lang-container">
+    <a class="lang-option" href="./de/html/index.html">
+      <img src="./flags/de.svg" alt="Deutsch" />
+      Deutsch
+    </a>
+    <a class="lang-option" href="./en/html/index.html">
+      <img src="./flags/us.svg" alt="English" />
+      English
+    </a>
+  </div>
+</body>
+</html>

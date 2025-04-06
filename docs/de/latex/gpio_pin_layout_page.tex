@@ -1,0 +1,62 @@
+\chapter{GPIO Pin Layout}
+\hypertarget{gpio_pin_layout_page}{}\label{gpio_pin_layout_page}\index{GPIO Pin Layout@{GPIO Pin Layout}}
+Übersicht aller vom Gerät verwendeten GPIO-\/\+Funktionen.\hypertarget{gpio_pin_layout_page_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Übersicht}{Übersicht}}\label{gpio_pin_layout_page_autotoc_md13}
+Diese Seite zeigt die Belegung der GPIO-\/\+Pins des Geräts und beschreibt die jeweilige Funktion und Nutzung.\hypertarget{gpio_pin_layout_page_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Detaillierte GPIO-\/\+Funktionen}{Detaillierte GPIO-\/\+Funktionen}}\label{gpio_pin_layout_page_autotoc_md14}
+Nachfolgend das vollständige GPIO-\/\+Layout\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Beschreibung    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Beschreibung    }\\\cline{1-3}
+\endhead
+GPIO0   &Strapping   &-\/    \\\cline{1-3}
+GPIO1   &RTC ADC1\+\_\+\+CH0   &LED-\/\+Streifen    \\\cline{1-3}
+GPIO2   &RTC ADC1\+\_\+\+CH1   &Lüftersteuerung    \\\cline{1-3}
+GPIO3   &Strapping   &-\/    \\\cline{1-3}
+GPIO4   &RTC ADC1\+\_\+\+CH3   &Frei    \\\cline{1-3}
+GPIO5   &RTC ADC1\+\_\+\+CH4   &Frei    \\\cline{1-3}
+GPIO6   &RTC ADC1\+\_\+\+CH5   &Frei    \\\cline{1-3}
+GPIO7   &RTC ADC1\+\_\+\+CH6   &Frei    \\\cline{1-3}
+GPIO8   &I²C SDA   &-\/    \\\cline{1-3}
+GPIO9   &I²C SCL   &-\/    \\\cline{1-3}
+GPIO10   &SPI2 CS   &-\/    \\\cline{1-3}
+GPIO11   &SPI2 MOSI   &-\/    \\\cline{1-3}
+GPIO12   &SPI2 CLK   &-\/    \\\cline{1-3}
+GPIO13   &SPI2 MISO   &-\/    \\\cline{1-3}
+GPIO14   &RTC   &Start-\/\+Taster    \\\cline{1-3}
+GPIO15   &RTC   &Stop-\/\+Taster    \\\cline{1-3}
+GPIO16   &RTC   &Encoder    \\\cline{1-3}
+GPIO17   &RTC   &Encoder    \\\cline{1-3}
+GPIO18   &RTC   &Encoder    \\\cline{1-3}
+GPIO19   &UART1 RTS   &-\/    \\\cline{1-3}
+GPIO20   &UART1 CTS   &-\/    \\\cline{1-3}
+GPIO21   &RTC   &Heizungssteuerung    \\\cline{1-3}
+GPIO35   &SPI0/1   &-\/    \\\cline{1-3}
+GPIO36   &SPI0/1   &-\/    \\\cline{1-3}
+GPIO37   &SPI0/1   &-\/    \\\cline{1-3}
+GPIO38   &-\/   &Lüfterheizung    \\\cline{1-3}
+GPIO39   &JTAG   &-\/    \\\cline{1-3}
+GPIO40   &JTAG   &-\/    \\\cline{1-3}
+GPIO41   &JTAG   &-\/    \\\cline{1-3}
+GPIO42   &JTAG   &-\/    \\\cline{1-3}
+GPIO43   &UART0 TX   &-\/    \\\cline{1-3}
+GPIO44   &UART0 RX   &-\/    \\\cline{1-3}
+GPIO45   &Strapping   &-\/    \\\cline{1-3}
+GPIO46   &Strapping   &-\/    \\\cline{1-3}
+GPIO47   &-\/   &Buzzer    \\\cline{1-3}
+GPIO48   &RGB-\/\+LED   &-\/   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{gpio_pin_layout_page_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Hinweise}{Hinweise}}\label{gpio_pin_layout_page_autotoc_md15}
+
+\begin{DoxyItemize}
+\item Pins mit "{}\+Frei"{} sind derzeit ungenutzt.
+\item Strapping-\/\+Pins dienen zum Booten/\+Konfigurieren und dürfen im Betrieb nicht verändert werden.
+\item Einige GPIOs benötigen laut ESP32-\/\+S3-\/\+Spezifikation externe Pull-\/\+Ups oder Pull-\/\+Downs.
+\item Alle Eingänge sind intern mit Pull-\/\+Ups versehen.
+\item Alle Ausgänge sind active-\/high und schalten eine Low-\/\+Side-\/\+Stufe über einen IRLZ44\+N-\/\+MOSFET. 
+\end{DoxyItemize}
