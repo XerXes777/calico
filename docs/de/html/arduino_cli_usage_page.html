@@ -91,11 +91,11 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Anleitung zum Kompilieren und Hochladen mit Arduino CLI.</p>
-<h3><a class="anchor" id="autotoc_md3"></a>
+<h3><a class="anchor" id="autotoc_md4"></a>
 Hinweis für Arduino-IDE-Nutzer</h3>
 <p>Wer lieber eine grafische Oberfläche nutzt, kann weiterhin die Arduino IDE verwenden. <br  />
  Diese Anleitung richtet sich an Fortgeschrittene, die ohne Editor oder automatisiert arbeiten möchten.</p>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md5"></a>
 Einstieg mit der Arduino CLI</h3>
 <ol type="1">
 <li><b>Projekt herunterladen:</b> Entpacke das Archiv nach: <div class="fragment"><div class="line">C:\Users\&lt;DeinBenutzername&gt;\Documents\Arduino</div>
@@ -111,6 +111,7 @@ Einstieg mit der Arduino CLI</h3>
 <div class="line">arduino-cli config set directories.downloads <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\platforms\temp&quot;</span></div>
 <div class="line">arduino-cli config set directories.user <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino&quot;</span></div>
 <div class="line">arduino-cli config set directories.builtin.libraries <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\platforms\libraries&quot;</span></div>
+<div class="line">arduino-cli config set library.enable_unsafe_install <span class="keyword">true</span></div>
 </div><!-- fragment --></li>
 <li><b>Konfiguration prüfen:</b> <div class="fragment"><div class="line">arduino-cli config dump</div>
 </div><!-- fragment --></li>
@@ -130,13 +131,27 @@ Einstieg mit der Arduino CLI</h3>
 </div><!-- fragment --><p class="startli">Mit <code>Strg + C</code> beenden.</p>
 </li>
 </ol>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
 Hinweise</h3>
 <ul>
 <li>Stelle sicher, dass das Board angeschlossen ist und Treiber installiert sind.</li>
 <li>Ersetze <code>COM5</code> mit dem passenden Anschluss.</li>
-<li>Die CLI-Konfiguration muss nur einmal durchgeführt werden. </li>
+<li>Die CLI-Konfiguration muss nur einmal durchgeführt werden.</li>
 </ul>
+<h3><a class="anchor" id="autotoc_md7"></a>
+⚠️ Hinweis: Veraltete Bibliotheken im Library Manager</h3>
+<p>Einige Arduino-Bibliotheken im Library Manager sind veraltet. <br  />
+ Du kannst die aktuellen Versionen direkt von GitHub installieren:</p>
+<div class="fragment"><div class="line">arduino-cli lib install --git-url https:<span class="comment">//github.com/ESP32Async/ESPAsyncWebServer.git#v3.7.6</span></div>
+<div class="line">arduino-cli lib install --git-url https:<span class="comment">//github.com/ESP32Async/AsyncTCP.git#v3.3.8</span></div>
+</div><!-- fragment --><p>Diese Bibliotheken werden hier gespeichert: </p><div class="fragment"><div class="line">%USERPROFILE%\Documents\Arduino\libraries</div>
+</div><!-- fragment --><p>Damit Arduino CLI sie im Profil-basierten Build (sketch.yaml) nutzt:</p><ol type="1">
+<li>Zuerst einmalig das Projekt kompilieren, damit Arduino CLI die internen Lib-Ordner anlegt: <div class="fragment"><div class="line">arduino-cli compile YourProjectName --clean --log-level warn --log --build-path <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\YourProjectName\build&quot;</span></div>
+</div><!-- fragment --></li>
+<li>Danach die jeweiligen <code>src/</code>-Ordner in diesen Verzeichnissen manuell ersetzen: <div class="fragment"><div class="line">%USERPROFILE%\Documents\Arduino\platforms\internal\ESPAsyncWebServer...</div>
+<div class="line">%USERPROFILE%\Documents\Arduino\platforms\internal\AsyncTCP...</div>
+</div><!-- fragment --> Kopiere den Inhalt der neuen GitHub-Versionen in diese Verzeichnisse. Die neuen Versionen werden dann beim nächsten Build verwendet. </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div style="text-align: center; font-size: 0.9em; color: #555; margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;">

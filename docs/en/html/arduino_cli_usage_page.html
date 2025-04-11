@@ -111,6 +111,7 @@ Getting Started with Arduino CLI</h3>
 <div class="line">arduino-cli config set directories.downloads <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\platforms\temp&quot;</span></div>
 <div class="line">arduino-cli config set directories.user <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino&quot;</span></div>
 <div class="line">arduino-cli config set directories.builtin.libraries <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\platforms\libraries&quot;</span></div>
+<div class="line">arduino-cli config set library.enable_unsafe_install <span class="keyword">true</span></div>
 </div><!-- fragment --></li>
 <li><b>Check Configuration:</b> <div class="fragment"><div class="line">arduino-cli config dump</div>
 </div><!-- fragment --></li>
@@ -135,8 +136,22 @@ Notes</h3>
 <ul>
 <li>Make sure the board is connected and drivers are installed.</li>
 <li>Replace <code>COM5</code> with the correct port.</li>
-<li>Initial configuration is only needed once per environment. </li>
+<li>Initial configuration is only needed once per environment.</li>
 </ul>
+<h3><a class="anchor" id="autotoc_md3"></a>
+⚠️ Note: Outdated Libraries in Library Manager</h3>
+<p>Some libraries in the Arduino Library Manager are outdated. <br  />
+ To use newer versions, install them directly from GitHub:</p>
+<div class="fragment"><div class="line">arduino-cli lib install --git-url https:<span class="comment">//github.com/ESP32Async/ESPAsyncWebServer.git#v3.7.6</span></div>
+<div class="line">arduino-cli lib install --git-url https:<span class="comment">//github.com/ESP32Async/AsyncTCP.git#v3.3.8</span></div>
+</div><!-- fragment --><p>These libraries will be installed in: </p><div class="fragment"><div class="line">%USERPROFILE%\Documents\Arduino\libraries</div>
+</div><!-- fragment --><p>To make Arduino CLI use them in a profile-based build (sketch.yaml):</p><ol type="1">
+<li>First, run a compile command once, so Arduino CLI creates the internal library folders: <div class="fragment"><div class="line">arduino-cli compile YourProjectName --clean --log-level warn --log --build-path <span class="stringliteral">&quot;%USERPROFILE%\Documents\Arduino\YourProjectName\build&quot;</span></div>
+</div><!-- fragment --></li>
+<li>Then replace the <code>src/</code> folders in the following internal directories: <div class="fragment"><div class="line">%USERPROFILE%\Documents\Arduino\platforms\internal\ESPAsyncWebServer...</div>
+<div class="line">%USERPROFILE%\Documents\Arduino\platforms\internal\AsyncTCP...</div>
+</div><!-- fragment --> Overwrite the contents with the new files from the GitHub libraries. </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div style="text-align: center; font-size: 0.9em; color: #555; margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;">

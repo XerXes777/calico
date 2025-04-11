@@ -28,6 +28,7 @@ If you prefer a graphical interface, you can still use the Arduino IDE. ~\newlin
 \DoxyCodeLine{arduino-\/cli\ config\ set\ directories.downloads\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)temp"{}}}
 \DoxyCodeLine{arduino-\/cli\ config\ set\ directories.user\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino"{}}}
 \DoxyCodeLine{arduino-\/cli\ config\ set\ directories.builtin.libraries\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)libraries"{}}}
+\DoxyCodeLine{arduino-\/cli\ config\ set\ library.enable\_unsafe\_install\ \textcolor{keyword}{true}}
 
 \end{DoxyCode}
 
@@ -88,5 +89,39 @@ Press {\ttfamily Ctrl + C} to exit.
 \begin{DoxyItemize}
 \item Make sure the board is connected and drivers are installed.
 \item Replace {\ttfamily COM5} with the correct port.
-\item Initial configuration is only needed once per environment. 
-\end{DoxyItemize}
+\item Initial configuration is only needed once per environment.
+\end{DoxyItemize}\hypertarget{arduino_cli_usage_page_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{⚠️ Note\+: Outdated Libraries in Library Manager}{⚠️ Note\+: Outdated Libraries in Library Manager}}\label{arduino_cli_usage_page_autotoc_md3}
+Some libraries in the Arduino Library Manager are outdated. ~\newline
+ To use newer versions, install them directly from Git\+Hub\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ lib\ install\ -\/-\/git-\/url\ https:\textcolor{comment}{//github.com/ESP32Async/ESPAsyncWebServer.git\#v3.7.6}}
+\DoxyCodeLine{arduino-\/cli\ lib\ install\ -\/-\/git-\/url\ https:\textcolor{comment}{//github.com/ESP32Async/AsyncTCP.git\#v3.3.8}}
+
+\end{DoxyCode}
+
+
+These libraries will be installed in\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)libraries}
+
+\end{DoxyCode}
+
+
+To make Arduino CLI use them in a profile-\/based build (sketch.\+yaml)\+:
+\begin{DoxyEnumerate}
+\item First, run a compile command once, so Arduino CLI creates the internal library folders\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{arduino-\/cli\ compile\ YourProjectName\ -\/-\/clean\ -\/-\/log-\/level\ warn\ -\/-\/log\ -\/-\/build-\/path\ \textcolor{stringliteral}{"{}\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)YourProjectName\(\backslash\)build"{}}}
+
+\end{DoxyCode}
+
+\item Then replace the {\ttfamily src/} folders in the following internal directories\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)internal\(\backslash\)ESPAsyncWebServer...}
+\DoxyCodeLine{\%USERPROFILE\%\(\backslash\)Documents\(\backslash\)Arduino\(\backslash\)platforms\(\backslash\)internal\(\backslash\)AsyncTCP...}
+
+\end{DoxyCode}
+ Overwrite the contents with the new files from the Git\+Hub libraries. 
+\end{DoxyEnumerate}

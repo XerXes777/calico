@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wartung_0',['Wartung',['../user_guide_page.html#autotoc_md26',1,'']]]
+  ['veraltete_20bibliotheken_20im_20library_20manager_0',['⚠️ Hinweis: Veraltete Bibliotheken im Library Manager',['../arduino_cli_usage_page.html#autotoc_md7',1,'']]]
 ];
