@@ -16,11 +16,11 @@ Nachfolgend das vollständige GPIO-\/\+Layout\+:
 \endhead
 GPIO0   &Strapping   &-\/    \\\cline{1-3}
 GPIO1   &RTC ADC1\+\_\+\+CH0   &LED-\/\+Streifen    \\\cline{1-3}
-GPIO2   &RTC ADC1\+\_\+\+CH1   &Lüftersteuerung    \\\cline{1-3}
+GPIO2   &RTC ADC1\+\_\+\+CH1   &Lüfter    \\\cline{1-3}
 GPIO3   &Strapping   &-\/    \\\cline{1-3}
-GPIO4   &RTC ADC1\+\_\+\+CH3   &Frei    \\\cline{1-3}
-GPIO5   &RTC ADC1\+\_\+\+CH4   &Frei    \\\cline{1-3}
-GPIO6   &RTC ADC1\+\_\+\+CH5   &Frei    \\\cline{1-3}
+GPIO4   &RTC ADC1\+\_\+\+CH3   &Start Externer Eingang    \\\cline{1-3}
+GPIO5   &RTC ADC1\+\_\+\+CH4   &Stop Externer Eingang    \\\cline{1-3}
+GPIO6   &RTC ADC1\+\_\+\+CH5   &Benutzer Externer Ausgang    \\\cline{1-3}
 GPIO7   &RTC ADC1\+\_\+\+CH6   &Frei    \\\cline{1-3}
 GPIO8   &I²C SDA   &-\/    \\\cline{1-3}
 GPIO9   &I²C SCL   &-\/    \\\cline{1-3}
@@ -30,16 +30,16 @@ GPIO12   &SPI2 CLK   &-\/    \\\cline{1-3}
 GPIO13   &SPI2 MISO   &-\/    \\\cline{1-3}
 GPIO14   &RTC   &Start-\/\+Taster    \\\cline{1-3}
 GPIO15   &RTC   &Stop-\/\+Taster    \\\cline{1-3}
-GPIO16   &RTC   &Encoder    \\\cline{1-3}
-GPIO17   &RTC   &Encoder    \\\cline{1-3}
-GPIO18   &RTC   &Encoder    \\\cline{1-3}
+GPIO16   &RTC   &Encoder-\/\+Taster    \\\cline{1-3}
+GPIO17   &RTC   &Encoder DT    \\\cline{1-3}
+GPIO18   &RTC   &Encoder CLK    \\\cline{1-3}
 GPIO19   &UART1 RTS   &-\/    \\\cline{1-3}
 GPIO20   &UART1 CTS   &-\/    \\\cline{1-3}
-GPIO21   &RTC   &Heizungssteuerung    \\\cline{1-3}
+GPIO21   &RTC   &Heizung    \\\cline{1-3}
 GPIO35   &SPI0/1   &-\/    \\\cline{1-3}
 GPIO36   &SPI0/1   &-\/    \\\cline{1-3}
 GPIO37   &SPI0/1   &-\/    \\\cline{1-3}
-GPIO38   &-\/   &Lüfterheizung    \\\cline{1-3}
+GPIO38   &-\/   &Lüfter für Heizung    \\\cline{1-3}
 GPIO39   &JTAG   &-\/    \\\cline{1-3}
 GPIO40   &JTAG   &-\/    \\\cline{1-3}
 GPIO41   &JTAG   &-\/    \\\cline{1-3}
@@ -48,15 +48,15 @@ GPIO43   &UART0 TX   &-\/    \\\cline{1-3}
 GPIO44   &UART0 RX   &-\/    \\\cline{1-3}
 GPIO45   &Strapping   &-\/    \\\cline{1-3}
 GPIO46   &Strapping   &-\/    \\\cline{1-3}
-GPIO47   &-\/   &Buzzer    \\\cline{1-3}
-GPIO48   &RGB-\/\+LED   &-\/   \\\cline{1-3}
+GPIO47   &-\/   &Summer    \\\cline{1-3}
+GPIO48   &RGB LED ONBOARD   &-\/   \\\cline{1-3}
 \end{longtabu}
 \hypertarget{gpio_pin_layout_page_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Hinweise}{Hinweise}}\label{gpio_pin_layout_page_autotoc_md17}
 
 \begin{DoxyItemize}
 \item Pins mit "{}\+Frei"{} sind derzeit ungenutzt.
-\item Strapping-\/\+Pins dienen zum Booten/\+Konfigurieren und dürfen im Betrieb nicht verändert werden.
-\item Einige GPIOs benötigen laut ESP32-\/\+S3-\/\+Spezifikation externe Pull-\/\+Ups oder Pull-\/\+Downs.
-\item Alle Eingänge sind intern mit Pull-\/\+Ups versehen.
-\item Alle Ausgänge sind active-\/high und schalten eine Low-\/\+Side-\/\+Stufe über einen IRLZ44\+N-\/\+MOSFET. 
+\item Strapping-\/\+Pins werden nicht benutzt.
+\item Alle Eingänge sind intern mit Pull-\/\+Ups versehen und daher active-\/low.
+\item Alle externen Ausgänge sind active-\/high und schalten Low-\/\+Side-\/\+Lasten über IRLZ44\+N-\/\+MOSFETs.
+\item Alle externen Eingänge sind active-\/low und durch PC817-\/\+Optokoppler geschützt. 
 \end{DoxyItemize}
