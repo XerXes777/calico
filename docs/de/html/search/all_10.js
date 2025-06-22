@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['schritte_0',['Erste Schritte',['../user_guide_page.html#autotoc_md26',1,'']]],
-  ['specifications_1',['Microcontroller Specifications',['../microcontroller_spec_page.html',1,'']]]
+  ['quellcode_0',['Arbeiten mit dem Quellcode',['../index.html#source_code_usage_sec',1,'']]]
 ];

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['hinweis_20für_20arduino_20ide_20nutzer_0',['Hinweis für Arduino-IDE-Nutzer',['../arduino_cli_usage_page.html#autotoc_md4',1,'']]],
-  ['hinweis_3a_20veraltete_20bibliotheken_20im_20library_20manager_1',['⚠️ Hinweis: Veraltete Bibliotheken im Library Manager',['../arduino_cli_usage_page.html#autotoc_md7',1,'']]],
-  ['hinweise_2',['Hinweise',['../arduino_cli_usage_page.html#autotoc_md6',1,'Hinweise'],['../gpio_pin_layout_page.html#autotoc_md17',1,'Hinweise']]],
-  ['home_3',['Home',['../index.html',1,'']]]
+  ['gpio_2047_0',['LEDC PWM-Grenzen (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md21',1,'']]],
+  ['gpio_20funktionen_1',['Detaillierte GPIO-Funktionen',['../gpio_pin_layout_page.html#autotoc_md16',1,'']]],
+  ['gpio_20pin_20layout_2',['GPIO Pin Layout',['../gpio_pin_layout_page.html',1,'']]],
+  ['gpio_5fpin_5flayout_2edox_3',['gpio_pin_layout.dox',['../gpio__pin__layout_8dox.html',1,'']]],
+  ['grenzen_20gpio_2047_4',['LEDC PWM-Grenzen (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md21',1,'']]],
+  ['guide_5',['User Guide',['../user_guide_page.html',1,'']]]
 ];

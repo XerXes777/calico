@@ -99,8 +99,44 @@ Required Microcontroller:</h3>
 <li><b>SRAM</b>: 512 KB</li>
 <li><b>RTC SRAM</b>: 16 KB</li>
 <li><b>Flash Size</b>: 16 MB (Quad SPI)</li>
-<li><b>PSRAM Size</b>: 8 MB (Octal SPI) </li>
+<li><b>PSRAM Size</b>: 8 MB (Octal SPI)</li>
 </ul>
+<h3><a class="anchor" id="autotoc_md19"></a>
+LEDC PWM Limits (GPIO 47)</h3>
+<p>The following table shows the minimum and maximum PWM frequency ranges supported by the ESP32-S3 at different bit resolutions on GPIO 47 using the LEDC peripheral:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Bit resolution   </th><th class="markdownTableHeadNone">Min Frequency [Hz]   </th><th class="markdownTableHeadNone">Max Frequency [Hz]    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">19,532   </td><td class="markdownTableBodyNone">20,039,138    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">9,766   </td><td class="markdownTableBodyNone">10,019,569    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">4,883   </td><td class="markdownTableBodyNone">5,009,784    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">2,442   </td><td class="markdownTableBodyNone">2,504,892    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">1,221   </td><td class="markdownTableBodyNone">1,252,446    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">6   </td><td class="markdownTableBodyNone">611   </td><td class="markdownTableBodyNone">626,223    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">306   </td><td class="markdownTableBodyNone">313,111    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">153   </td><td class="markdownTableBodyNone">156,555    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">9   </td><td class="markdownTableBodyNone">77   </td><td class="markdownTableBodyNone">78,277    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">10   </td><td class="markdownTableBodyNone">39   </td><td class="markdownTableBodyNone">39,138    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">11   </td><td class="markdownTableBodyNone">20   </td><td class="markdownTableBodyNone">19,569    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">12   </td><td class="markdownTableBodyNone">10   </td><td class="markdownTableBodyNone">9,784    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">13   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">4,892    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">14   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">2,446   </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>Values based on empirical measurement using GPIO 47 on ESP32-S3. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div style="text-align: center; font-size: 0.9em; color: #555; margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;">

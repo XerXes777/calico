@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cli_0',['Einstieg mit der Arduino CLI',['../arduino_cli_usage_page.html#autotoc_md5',1,'']]],
-  ['cli_20usage_1',['Arduino CLI Usage',['../arduino_cli_usage_page.html',1,'']]],
-  ['configuration_2',['Arduino IDE Configuration',['../arduino_ide_config_page.html',1,'']]]
+  ['benötigter_20mikrocontroller_3a_0',['Benötigter Mikrocontroller:',['../microcontroller_spec_page.html#autotoc_md20',1,'']]],
+  ['benutzerhandbuch_1',['Benutzerhandbuch',['../index.html#user_guide_sec',1,'']]],
+  ['bibliotheken_20im_20library_20manager_2',['⚠️ Hinweis: Veraltete Bibliotheken im Library Manager',['../arduino_cli_usage_page.html#autotoc_md7',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fmain_2edox_0',['_main.dox',['../__main_8dox.html',1,'']]]
+  ['47_0',['LEDC PWM Limits (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md19',1,'']]]
 ];

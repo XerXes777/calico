@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['maintenance_0',['Maintenance',['../user_guide_page.html#autotoc_md23',1,'']]],
-  ['manager_1',['⚠️ Note: Outdated Libraries in Library Manager',['../arduino_cli_usage_page.html#autotoc_md3',1,'']]],
-  ['microcontroller_20specifications_2',['Microcontroller Specifications',['../microcontroller_spec_page.html',1,'']]],
-  ['microcontroller_3a_3',['Required Microcontroller:',['../microcontroller_spec_page.html#autotoc_md18',1,'']]],
-  ['microcontroller_5fspec_2edox_4',['microcontroller_spec.dox',['../microcontroller__spec_8dox.html',1,'']]]
+  ['layout_0',['GPIO Pin Layout',['../gpio_pin_layout_page.html',1,'']]],
+  ['ledc_20pwm_20limits_20gpio_2047_1',['LEDC PWM Limits (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md19',1,'']]],
+  ['libraries_20in_20library_20manager_2',['⚠️ Note: Outdated Libraries in Library Manager',['../arduino_cli_usage_page.html#autotoc_md3',1,'']]],
+  ['library_20manager_3',['⚠️ Note: Outdated Libraries in Library Manager',['../arduino_cli_usage_page.html#autotoc_md3',1,'']]],
+  ['license_4',['License',['../index.html#license_sec',1,'']]],
+  ['limits_20gpio_2047_5',['LEDC PWM Limits (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md19',1,'']]]
 ];

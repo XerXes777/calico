@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['⚠️_20hinweis_3a_20veraltete_20bibliotheken_20im_20library_20manager_0',['⚠️ Hinweis: Veraltete Bibliotheken im Library Manager',['../arduino_cli_usage_page.html#autotoc_md7',1,'']]]
+  ['übersicht_0',['Übersicht',['../gpio_pin_layout_page.html#autotoc_md15',1,'Übersicht'],['../user_guide_page.html#autotoc_md27',1,'Übersicht']]]
 ];

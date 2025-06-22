@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['gpio_20funktionen_0',['Detaillierte GPIO-Funktionen',['../gpio_pin_layout_page.html#autotoc_md16',1,'']]],
-  ['gpio_20pin_20layout_1',['GPIO Pin Layout',['../gpio_pin_layout_page.html',1,'']]],
-  ['gpio_5fpin_5flayout_2edox_2',['gpio_pin_layout.dox',['../gpio__pin__layout_8dox.html',1,'']]],
-  ['guide_3',['User Guide',['../user_guide_page.html',1,'']]]
+  ['für_20arduino_20ide_20nutzer_0',['Hinweis für Arduino-IDE-Nutzer',['../arduino_cli_usage_page.html#autotoc_md4',1,'']]],
+  ['fehlerbehebung_1',['Fehlerbehebung',['../user_guide_page.html#autotoc_md31',1,'']]],
+  ['funktionen_2',['Funktionen',['../gpio_pin_layout_page.html#autotoc_md16',1,'Detaillierte GPIO-Funktionen'],['../index.html#features_sec',1,'Funktionen']]]
 ];

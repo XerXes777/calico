@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['einführung_0',['Einführung',['../index.html#intro_sec',1,'']]],
-  ['einstellungen_3a_1',['Empfohlene Einstellungen:',['../arduino_ide_config_page.html#autotoc_md11',1,'']]],
-  ['einstieg_20mit_20der_20arduino_20cli_2',['Einstieg mit der Arduino CLI',['../arduino_cli_usage_page.html#autotoc_md5',1,'']]],
-  ['empfohlene_20einstellungen_3a_3',['Empfohlene Einstellungen:',['../arduino_ide_config_page.html#autotoc_md11',1,'']]],
-  ['erste_20schritte_4',['Erste Schritte',['../user_guide_page.html#autotoc_md26',1,'']]]
+  ['dem_20quellcode_0',['Arbeiten mit dem Quellcode',['../index.html#source_code_usage_sec',1,'']]],
+  ['der_20arduino_20cli_1',['Einstieg mit der Arduino CLI',['../arduino_cli_usage_page.html#autotoc_md5',1,'']]],
+  ['detaillierte_20gpio_20funktionen_2',['Detaillierte GPIO-Funktionen',['../gpio_pin_layout_page.html#autotoc_md16',1,'']]]
 ];

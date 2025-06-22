@@ -7,49 +7,49 @@ Below is the complete GPIO pin layout\+:
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
 \endfirsthead
 \hline
 \endfoot
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
 \endhead
-GPIO0   &Strapping   &-\/    \\\cline{1-3}
-GPIO1   &RTC ADC1\+\_\+\+CH0   &LED Stripe    \\\cline{1-3}
+GPIO0   &BOOT   &/    \\\cline{1-3}
+GPIO1   &RTC ADC1\+\_\+\+CH0   &Fan for Heating    \\\cline{1-3}
 GPIO2   &RTC ADC1\+\_\+\+CH1   &Fan    \\\cline{1-3}
-GPIO3   &Strapping   &-\/    \\\cline{1-3}
+GPIO3   &JTAG   &/    \\\cline{1-3}
 GPIO4   &RTC ADC1\+\_\+\+CH3   &Start Extern Input    \\\cline{1-3}
 GPIO5   &RTC ADC1\+\_\+\+CH4   &Stop Extern Input    \\\cline{1-3}
 GPIO6   &RTC ADC1\+\_\+\+CH5   &User Extern Output    \\\cline{1-3}
-GPIO7   &RTC ADC1\+\_\+\+CH6   &Free    \\\cline{1-3}
-GPIO8   &I²C SDA   &-\/    \\\cline{1-3}
-GPIO9   &I²C SCL   &-\/    \\\cline{1-3}
-GPIO10   &SPI2 CS   &-\/    \\\cline{1-3}
-GPIO11   &SPI2 MOSI   &-\/    \\\cline{1-3}
-GPIO12   &SPI2 CLK   &-\/    \\\cline{1-3}
-GPIO13   &SPI2 MISO   &-\/    \\\cline{1-3}
+GPIO7   &RTC ADC1\+\_\+\+CH6   &LED Stripe WS2813 5V    \\\cline{1-3}
+GPIO8   &I²C SDA   &I²C SDA    \\\cline{1-3}
+GPIO9   &I²C SCL   &I²C SCL    \\\cline{1-3}
+GPIO10   &SPI2 CS   &SPI2 CS fast    \\\cline{1-3}
+GPIO11   &SPI2 MOSI   &SPI2 MOSI fast    \\\cline{1-3}
+GPIO12   &SPI2 CLK   &SPI2 CLK fast    \\\cline{1-3}
+GPIO13   &SPI2 MISO   &SPI2 MISO fast    \\\cline{1-3}
 GPIO14   &RTC   &Start Button    \\\cline{1-3}
 GPIO15   &RTC   &Stop Button    \\\cline{1-3}
 GPIO16   &RTC   &Encoder Button    \\\cline{1-3}
 GPIO17   &RTC   &Encoder DT    \\\cline{1-3}
 GPIO18   &RTC   &Encoder CLK    \\\cline{1-3}
-GPIO19   &UART1 RTS   &-\/    \\\cline{1-3}
-GPIO20   &UART1 CTS   &-\/    \\\cline{1-3}
+GPIO19   &UART1 RTS   &?    \\\cline{1-3}
+GPIO20   &UART1 CTS   &?    \\\cline{1-3}
 GPIO21   &RTC   &Heating    \\\cline{1-3}
-GPIO35   &SPI0/1   &-\/    \\\cline{1-3}
-GPIO36   &SPI0/1   &-\/    \\\cline{1-3}
-GPIO37   &SPI0/1   &-\/    \\\cline{1-3}
-GPIO38   &-\/   &Fan for Heating    \\\cline{1-3}
-GPIO39   &JTAG   &-\/    \\\cline{1-3}
-GPIO40   &JTAG   &-\/    \\\cline{1-3}
-GPIO41   &JTAG   &-\/    \\\cline{1-3}
-GPIO42   &JTAG   &-\/    \\\cline{1-3}
-GPIO43   &UART0 TX   &-\/    \\\cline{1-3}
-GPIO44   &UART0 RX   &-\/    \\\cline{1-3}
-GPIO45   &Strapping   &-\/    \\\cline{1-3}
-GPIO46   &Strapping   &-\/    \\\cline{1-3}
-GPIO47   &-\/   &Buzzer    \\\cline{1-3}
-GPIO48   &RGB LED ONBOARD   &-\/   \\\cline{1-3}
+GPIO35   &GPIO SPI3 CS   &Free    \\\cline{1-3}
+GPIO36   &GPIO SPI3 MOSI   &Free    \\\cline{1-3}
+GPIO37   &GPIO SPI3 CLK   &Free    \\\cline{1-3}
+GPIO38   &GPIO SPI3 MISO   &Free    \\\cline{1-3}
+GPIO39   &JTAG   &?    \\\cline{1-3}
+GPIO40   &JTAG   &?    \\\cline{1-3}
+GPIO41   &JTAG   &?    \\\cline{1-3}
+GPIO42   &JTAG   &?    \\\cline{1-3}
+GPIO43   &UART0 TX   &/    \\\cline{1-3}
+GPIO44   &UART0 RX   &/    \\\cline{1-3}
+GPIO45   &VDD\+\_\+\+SPI Voltage   &/    \\\cline{1-3}
+GPIO46   &BOOT HELPER   &/    \\\cline{1-3}
+GPIO47   &GPIO   &Buzzer    \\\cline{1-3}
+GPIO48   &RGB BUILTIN   &/   \\\cline{1-3}
 \end{longtabu}
 \hypertarget{gpio_pin_layout_page_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Notes}{Notes}}\label{gpio_pin_layout_page_autotoc_md14}
 

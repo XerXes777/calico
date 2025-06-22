@@ -1,6 +1,6 @@
 \chapter{Microcontroller Specifications}
 \hypertarget{microcontroller_spec_page}{}\label{microcontroller_spec_page}\index{Microcontroller Specifications@{Microcontroller Specifications}}
-Technische Daten des benötigten ESP32-\/\+S3-\/\+Moduls.\hypertarget{microcontroller_spec_page_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{Benötigter Mikrocontroller\+:}{Benötigter Mikrocontroller\+:}}\label{microcontroller_spec_page_autotoc_md19}
+Technische Daten des benötigten ESP32-\/\+S3-\/\+Moduls.\hypertarget{microcontroller_spec_page_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{Benötigter Mikrocontroller\+:}{Benötigter Mikrocontroller\+:}}\label{microcontroller_spec_page_autotoc_md20}
 
 \begin{DoxyItemize}
 \item {\bfseries{Board-\/\+Bestellcode}}\+: ESP32-\/\+S3-\/\+WROOM-\/1-\/\+N16\+R8
@@ -8,5 +8,37 @@ Technische Daten des benötigten ESP32-\/\+S3-\/\+Moduls.\hypertarget{microcontr
 \item {\bfseries{SRAM}}\+: 512 KB
 \item {\bfseries{RTC SRAM}}\+: 16 KB
 \item {\bfseries{Flash Größe}}\+: 16 MB (Quad SPI)
-\item {\bfseries{PSRAM Größe}}\+: 8 MB (Octal SPI) 
-\end{DoxyItemize}
+\item {\bfseries{PSRAM Größe}}\+: 8 MB (Octal SPI)
+\end{DoxyItemize}\hypertarget{microcontroller_spec_page_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{LEDC PWM-\/\+Grenzen (GPIO 47)}{LEDC PWM-\/\+Grenzen (GPIO 47)}}\label{microcontroller_spec_page_autotoc_md21}
+Die folgende Tabelle zeigt die minimal und maximal erreichbaren PWM-\/\+Frequenzen bei unterschiedlichen Bitauflösungen auf GPIO 47 über das LEDC-\/\+Peripherie-\/\+Modul\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Bitauflösung   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Minimale Frequenz \mbox{[}Hz\mbox{]}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximale Frequenz \mbox{[}Hz\mbox{]}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Bitauflösung   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Minimale Frequenz \mbox{[}Hz\mbox{]}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Maximale Frequenz \mbox{[}Hz\mbox{]}    }\\\cline{1-3}
+\endhead
+1   &19.\+532   &20.\+039.\+138    \\\cline{1-3}
+2   &9.\+766   &10.\+019.\+569    \\\cline{1-3}
+3   &4.\+883   &5.\+009.\+784    \\\cline{1-3}
+4   &2.\+442   &2.\+504.\+892    \\\cline{1-3}
+5   &1.\+221   &1.\+252.\+446    \\\cline{1-3}
+6   &611   &626.\+223    \\\cline{1-3}
+7   &306   &313.\+111    \\\cline{1-3}
+8   &153   &156.\+555    \\\cline{1-3}
+9   &77   &78.\+277    \\\cline{1-3}
+10   &39   &39.\+138    \\\cline{1-3}
+11   &20   &19.\+569    \\\cline{1-3}
+12   &10   &9.\+784    \\\cline{1-3}
+13   &5   &4.\+892    \\\cline{1-3}
+14   &3   &2.\+446   \\\cline{1-3}
+\end{longtabu}
+
+
+\begin{DoxyNote}{Zu beachten}
+Diese Werte wurden empirisch auf GPIO 47 des ESP32-\/\+S3 gemessen. 
+\end{DoxyNote}

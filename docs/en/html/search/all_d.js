@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['recommended_20settings_3a_0',['Recommended Settings:',['../arduino_ide_config_page.html#autotoc_md9',1,'']]],
-  ['required_20microcontroller_3a_1',['Required Microcontroller:',['../microcontroller_spec_page.html#autotoc_md18',1,'']]]
+  ['pin_20layout_0',['GPIO Pin Layout',['../gpio_pin_layout_page.html',1,'']]],
+  ['pwm_20limits_20gpio_2047_1',['LEDC PWM Limits (GPIO 47)',['../microcontroller_spec_page.html#autotoc_md19',1,'']]]
 ];

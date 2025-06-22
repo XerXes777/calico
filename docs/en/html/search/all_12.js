@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['⚠️_20note_3a_20outdated_20libraries_20in_20library_20manager_0',['⚠️ Note: Outdated Libraries in Library Manager',['../arduino_cli_usage_page.html#autotoc_md3',1,'']]]
+  ['with_20arduino_20cli_0',['Getting Started with Arduino CLI',['../arduino_cli_usage_page.html#autotoc_md1',1,'']]],
+  ['with_20the_20source_20code_1',['Working with the Source Code',['../index.html#source_code_usage_sec',1,'']]],
+  ['working_20with_20the_20source_20code_2',['Working with the Source Code',['../index.html#source_code_usage_sec',1,'']]]
 ];
