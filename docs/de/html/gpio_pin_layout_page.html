@@ -99,79 +99,79 @@ Detaillierte GPIO-Funktionen</h3>
 <p>Nachfolgend das vollständige GPIO-Layout:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">GPIO   </th><th class="markdownTableHeadNone">Funktion   </th><th class="markdownTableHeadNone">Beschreibung    </th></tr>
+<th class="markdownTableHeadNone">GPIO   </th><th class="markdownTableHeadNone">RST   </th><th class="markdownTableHeadNone">GLITCH (µs)   </th><th class="markdownTableHeadNone">RTC   </th><th class="markdownTableHeadNone">ANALOG   </th><th class="markdownTableHeadNone">IO MUX Function   </th><th class="markdownTableHeadNone">Special   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO0   </td><td class="markdownTableBodyNone">BOOT   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO0   </td><td class="markdownTableBodyNone">I=1, WPU   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">BOOT   </td><td class="markdownTableBodyNone">/    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO1   </td><td class="markdownTableBodyNone">RTC ADC1_CH0   </td><td class="markdownTableBodyNone">Lüfter für Heizung    </td></tr>
+<td class="markdownTableBodyNone">GPIO1   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH0   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Fan for Heating    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO2   </td><td class="markdownTableBodyNone">RTC ADC1_CH1   </td><td class="markdownTableBodyNone">Lüfter    </td></tr>
+<td class="markdownTableBodyNone">GPIO2   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Fan    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO3   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO3   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH2   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">JTAG SIGNAL SOURCE   </td><td class="markdownTableBodyNone">Is it usable?    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO4   </td><td class="markdownTableBodyNone">RTC ADC1_CH3   </td><td class="markdownTableBodyNone">Start Externer Eingang    </td></tr>
+<td class="markdownTableBodyNone">GPIO4   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH3   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Debug Poti, Free    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO5   </td><td class="markdownTableBodyNone">RTC ADC1_CH4   </td><td class="markdownTableBodyNone">Stop Externer Eingang    </td></tr>
+<td class="markdownTableBodyNone">GPIO5   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH4   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Free    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO6   </td><td class="markdownTableBodyNone">RTC ADC1_CH5   </td><td class="markdownTableBodyNone">Benutzer Externer Ausgang    </td></tr>
+<td class="markdownTableBodyNone">GPIO6   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH5   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Free    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO7   </td><td class="markdownTableBodyNone">RTC ADC1_CH6   </td><td class="markdownTableBodyNone">LED Stripe WS2813 5V    </td></tr>
+<td class="markdownTableBodyNone">GPIO7   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH6   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Free    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO8   </td><td class="markdownTableBodyNone">I²C SDA   </td><td class="markdownTableBodyNone">I²C SDA    </td></tr>
+<td class="markdownTableBodyNone">GPIO8   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH7   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">I²C SDA    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO9   </td><td class="markdownTableBodyNone">I²C SCL   </td><td class="markdownTableBodyNone">I²C SCL    </td></tr>
+<td class="markdownTableBodyNone">GPIO9   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH8   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">I²C SCL    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO10   </td><td class="markdownTableBodyNone">SPI2 CS   </td><td class="markdownTableBodyNone">SPI2 CS fast    </td></tr>
+<td class="markdownTableBodyNone">GPIO10   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC1_CH9   </td><td class="markdownTableBodyNone">FSPICSO Chip select   </td><td class="markdownTableBodyNone">SPI2 Full Speed   </td><td class="markdownTableBodyNone">SPI2 CS    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO11   </td><td class="markdownTableBodyNone">SPI2 MOSI   </td><td class="markdownTableBodyNone">SPI2 MOSI fast    </td></tr>
+<td class="markdownTableBodyNone">GPIO11   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH0   </td><td class="markdownTableBodyNone">FSPID Data in   </td><td class="markdownTableBodyNone">SPI2 Full Speed   </td><td class="markdownTableBodyNone">SPI2 MOSI    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO12   </td><td class="markdownTableBodyNone">SPI2 CLK   </td><td class="markdownTableBodyNone">SPI2 CLK fast    </td></tr>
+<td class="markdownTableBodyNone">GPIO12   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH1   </td><td class="markdownTableBodyNone">FSPICLK Clock   </td><td class="markdownTableBodyNone">SPI2 Full Speed   </td><td class="markdownTableBodyNone">SPI2 CLK    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO13   </td><td class="markdownTableBodyNone">SPI2 MISO   </td><td class="markdownTableBodyNone">SPI2 MISO fast    </td></tr>
+<td class="markdownTableBodyNone">GPIO13   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH2   </td><td class="markdownTableBodyNone">FSPIQ Data out   </td><td class="markdownTableBodyNone">SPI2 Full Speed   </td><td class="markdownTableBodyNone">SPI2 MISO    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO14   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Start-Taster    </td></tr>
+<td class="markdownTableBodyNone">GPIO14   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH3   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Start Button    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO15   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Stop-Taster    </td></tr>
+<td class="markdownTableBodyNone">GPIO15   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH4   </td><td class="markdownTableBodyNone">U0RTS   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Stop Button    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO16   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Encoder-Taster    </td></tr>
+<td class="markdownTableBodyNone">GPIO16   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH5   </td><td class="markdownTableBodyNone">U0CTS   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Encoder Button    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO17   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Encoder DT    </td></tr>
+<td class="markdownTableBodyNone">GPIO17   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH6   </td><td class="markdownTableBodyNone">U1TX   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Encoder DT    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO18   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Encoder CLK    </td></tr>
+<td class="markdownTableBodyNone">GPIO18   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone">60 HL,LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH7   </td><td class="markdownTableBodyNone">U1RX   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Encoder CLK    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO19   </td><td class="markdownTableBodyNone">UART1 RTS   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO19   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 HL,LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH8, USB_D-   </td><td class="markdownTableBodyNone">U1RTS   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">USB-C (LED)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO20   </td><td class="markdownTableBodyNone">UART1 CTS   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO20   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone">60 HL,LL   </td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone">ADC2_CH9, USB_D+   </td><td class="markdownTableBodyNone">U1CTS   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">USB-C (LED)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO21   </td><td class="markdownTableBodyNone">RTC   </td><td class="markdownTableBodyNone">Heizung    </td></tr>
+<td class="markdownTableBodyNone">GPIO21   </td><td class="markdownTableBodyNone">I=0   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">YES   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Heating    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO35   </td><td class="markdownTableBodyNone">GPIO SPI3 CS   </td><td class="markdownTableBodyNone">Free    </td></tr>
+<td class="markdownTableBodyNone">GPIO35   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Start Extern Input    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO36   </td><td class="markdownTableBodyNone">GPIO SPI3 MOSI   </td><td class="markdownTableBodyNone">Free    </td></tr>
+<td class="markdownTableBodyNone">GPIO36   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Stop Extern Input    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO37   </td><td class="markdownTableBodyNone">GPIO SPI3 CLK   </td><td class="markdownTableBodyNone">Free    </td></tr>
+<td class="markdownTableBodyNone">GPIO37   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">User Extern Output    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO38   </td><td class="markdownTableBodyNone">GPIO SPI3 MISO   </td><td class="markdownTableBodyNone">Free    </td></tr>
+<td class="markdownTableBodyNone">GPIO38   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">LED Stripe WS2813 5V    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO39   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO39   </td><td class="markdownTableBodyNone">I=1, WPU *   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">MTCK Test clock   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">Debug, Free    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO40   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO40   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">MTDO Test Data Out   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">Debug, Free    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO41   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO41   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">MTDI Test Data In   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">Debug, Free    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO42   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">?    </td></tr>
+<td class="markdownTableBodyNone">GPIO42   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">MTMS Test Mode Select   </td><td class="markdownTableBodyNone">JTAG   </td><td class="markdownTableBodyNone">Debug, Free    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO43   </td><td class="markdownTableBodyNone">UART0 TX   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO43   </td><td class="markdownTableBodyNone">I=1, WPU   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">U0TX   </td><td class="markdownTableBodyNone">UART0 TX   </td><td class="markdownTableBodyNone">USB-C    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO44   </td><td class="markdownTableBodyNone">UART0 RX   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO44   </td><td class="markdownTableBodyNone">I=1, WPU   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">U0RX   </td><td class="markdownTableBodyNone">UART0 RX   </td><td class="markdownTableBodyNone">USB-C    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO45   </td><td class="markdownTableBodyNone">VDD_SPI Voltage   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO45   </td><td class="markdownTableBodyNone">I=1, WPD   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">VDD_SPI Voltage   </td><td class="markdownTableBodyNone">Is it usable?    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO46   </td><td class="markdownTableBodyNone">BOOT HELPER   </td><td class="markdownTableBodyNone">/    </td></tr>
+<td class="markdownTableBodyNone">GPIO46   </td><td class="markdownTableBodyNone">I=1, WPD   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">BOOT   </td><td class="markdownTableBodyNone">/    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GPIO47   </td><td class="markdownTableBodyNone">GPIO   </td><td class="markdownTableBodyNone">Summer    </td></tr>
+<td class="markdownTableBodyNone">GPIO47   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">Buzzer    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">GPIO48   </td><td class="markdownTableBodyNone">RGB BUILTIN   </td><td class="markdownTableBodyNone">/   </td></tr>
+<td class="markdownTableBodyNone">GPIO48   </td><td class="markdownTableBodyNone">I=1   </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">RGB BUILTIN   </td><td class="markdownTableBodyNone">WS2812B RGB   </td></tr>
 </table>
 <h3><a class="anchor" id="autotoc_md17"></a>
 Hinweise</h3>

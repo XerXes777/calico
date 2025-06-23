@@ -5,51 +5,51 @@ Diese Seite zeigt die Belegung der GPIO-\/\+Pins des Geräts und beschreibt die 
 Nachfolgend das vollständige GPIO-\/\+Layout\+:
 
 \tabulinesep=1mm
-\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\begin{longtabu}spread 0pt [c]{*{8}{|X[-1]}|}
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Beschreibung    }\\\cline{1-3}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ RST   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GLITCH (µs)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ RTC   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ANALOG   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ IO MUX Function   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Special   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-8}
 \endfirsthead
 \hline
 \endfoot
 \hline
-\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Funktion   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Beschreibung    }\\\cline{1-3}
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GPIO   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ RST   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ GLITCH (µs)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ RTC   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ANALOG   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ IO MUX Function   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Special   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-8}
 \endhead
-GPIO0   &BOOT   &/    \\\cline{1-3}
-GPIO1   &RTC ADC1\+\_\+\+CH0   &Lüfter für Heizung    \\\cline{1-3}
-GPIO2   &RTC ADC1\+\_\+\+CH1   &Lüfter    \\\cline{1-3}
-GPIO3   &JTAG   &/    \\\cline{1-3}
-GPIO4   &RTC ADC1\+\_\+\+CH3   &Start Externer Eingang    \\\cline{1-3}
-GPIO5   &RTC ADC1\+\_\+\+CH4   &Stop Externer Eingang    \\\cline{1-3}
-GPIO6   &RTC ADC1\+\_\+\+CH5   &Benutzer Externer Ausgang    \\\cline{1-3}
-GPIO7   &RTC ADC1\+\_\+\+CH6   &LED Stripe WS2813 5V    \\\cline{1-3}
-GPIO8   &I²C SDA   &I²C SDA    \\\cline{1-3}
-GPIO9   &I²C SCL   &I²C SCL    \\\cline{1-3}
-GPIO10   &SPI2 CS   &SPI2 CS fast    \\\cline{1-3}
-GPIO11   &SPI2 MOSI   &SPI2 MOSI fast    \\\cline{1-3}
-GPIO12   &SPI2 CLK   &SPI2 CLK fast    \\\cline{1-3}
-GPIO13   &SPI2 MISO   &SPI2 MISO fast    \\\cline{1-3}
-GPIO14   &RTC   &Start-\/\+Taster    \\\cline{1-3}
-GPIO15   &RTC   &Stop-\/\+Taster    \\\cline{1-3}
-GPIO16   &RTC   &Encoder-\/\+Taster    \\\cline{1-3}
-GPIO17   &RTC   &Encoder DT    \\\cline{1-3}
-GPIO18   &RTC   &Encoder CLK    \\\cline{1-3}
-GPIO19   &UART1 RTS   &?    \\\cline{1-3}
-GPIO20   &UART1 CTS   &?    \\\cline{1-3}
-GPIO21   &RTC   &Heizung    \\\cline{1-3}
-GPIO35   &GPIO SPI3 CS   &Free    \\\cline{1-3}
-GPIO36   &GPIO SPI3 MOSI   &Free    \\\cline{1-3}
-GPIO37   &GPIO SPI3 CLK   &Free    \\\cline{1-3}
-GPIO38   &GPIO SPI3 MISO   &Free    \\\cline{1-3}
-GPIO39   &JTAG   &?    \\\cline{1-3}
-GPIO40   &JTAG   &?    \\\cline{1-3}
-GPIO41   &JTAG   &?    \\\cline{1-3}
-GPIO42   &JTAG   &?    \\\cline{1-3}
-GPIO43   &UART0 TX   &/    \\\cline{1-3}
-GPIO44   &UART0 RX   &/    \\\cline{1-3}
-GPIO45   &VDD\+\_\+\+SPI Voltage   &/    \\\cline{1-3}
-GPIO46   &BOOT HELPER   &/    \\\cline{1-3}
-GPIO47   &GPIO   &Summer    \\\cline{1-3}
-GPIO48   &RGB BUILTIN   &/   \\\cline{1-3}
+GPIO0   &I=1, WPU   &&YES   &&&BOOT   &/    \\\cline{1-8}
+GPIO1   &I=1   &60 LL   &YES   &ADC1\+\_\+\+CH0   &&&Fan for Heating    \\\cline{1-8}
+GPIO2   &I=1   &60 LL   &YES   &ADC1\+\_\+\+CH1   &&&Fan    \\\cline{1-8}
+GPIO3   &I=1   &60 LL   &YES   &ADC1\+\_\+\+CH2   &&JTAG SIGNAL SOURCE   &Is it usable?    \\\cline{1-8}
+GPIO4   &I=0   &60 LL   &YES   &ADC1\+\_\+\+CH3   &&&Debug Poti, Free    \\\cline{1-8}
+GPIO5   &I=0   &60 LL   &YES   &ADC1\+\_\+\+CH4   &&&Free    \\\cline{1-8}
+GPIO6   &I=0   &60 LL   &YES   &ADC1\+\_\+\+CH5   &&&Free    \\\cline{1-8}
+GPIO7   &I=0   &60 LL   &YES   &ADC1\+\_\+\+CH6   &&&Free    \\\cline{1-8}
+GPIO8   &I=0   &60 LL   &YES   &ADC1\+\_\+\+CH7   &&&I²C SDA    \\\cline{1-8}
+GPIO9   &I=1   &60 LL   &YES   &ADC1\+\_\+\+CH8   &&&I²C SCL    \\\cline{1-8}
+GPIO10   &I=1   &60 LL   &YES   &ADC1\+\_\+\+CH9   &FSPICSO Chip select   &SPI2 Full Speed   &SPI2 CS    \\\cline{1-8}
+GPIO11   &I=1   &60 LL   &YES   &ADC2\+\_\+\+CH0   &FSPID Data in   &SPI2 Full Speed   &SPI2 MOSI    \\\cline{1-8}
+GPIO12   &I=1   &60 LL   &YES   &ADC2\+\_\+\+CH1   &FSPICLK Clock   &SPI2 Full Speed   &SPI2 CLK    \\\cline{1-8}
+GPIO13   &I=1   &60 LL   &YES   &ADC2\+\_\+\+CH2   &FSPIQ Data out   &SPI2 Full Speed   &SPI2 MISO    \\\cline{1-8}
+GPIO14   &I=1   &60 LL   &YES   &ADC2\+\_\+\+CH3   &&&Start Button    \\\cline{1-8}
+GPIO15   &I=0   &&YES   &ADC2\+\_\+\+CH4   &U0\+RTS   &&Stop Button    \\\cline{1-8}
+GPIO16   &I=0   &&YES   &ADC2\+\_\+\+CH5   &U0\+CTS   &&Encoder Button    \\\cline{1-8}
+GPIO17   &I=1   &60 LL   &YES   &ADC2\+\_\+\+CH6   &U1\+TX   &&Encoder DT    \\\cline{1-8}
+GPIO18   &I=1   &60 HL,LL   &YES   &ADC2\+\_\+\+CH7   &U1\+RX   &&Encoder CLK    \\\cline{1-8}
+GPIO19   &I=0   &60 HL,LL   &YES   &ADC2\+\_\+\+CH8, USB\+\_\+\+D-\/   &U1\+RTS   &&USB-\/C (LED)    \\\cline{1-8}
+GPIO20   &I=0   &60 HL,LL   &YES   &ADC2\+\_\+\+CH9, USB\+\_\+\+D+   &U1\+CTS   &&USB-\/C (LED)    \\\cline{1-8}
+GPIO21   &I=0   &&YES   &&&&Heating    \\\cline{1-8}
+GPIO35   &I=1   &&&&&&Start Extern Input    \\\cline{1-8}
+GPIO36   &I=1   &&&&&&Stop Extern Input    \\\cline{1-8}
+GPIO37   &I=1   &&&&&&User Extern Output    \\\cline{1-8}
+GPIO38   &I=1   &&&&&&LED Stripe WS2813 5V    \\\cline{1-8}
+GPIO39   &I=1, WPU \texorpdfstring{$\ast$}{*}   &&&&MTCK Test clock   &JTAG   &Debug, Free    \\\cline{1-8}
+GPIO40   &I=1   &&&&MTDO Test Data Out   &JTAG   &Debug, Free    \\\cline{1-8}
+GPIO41   &I=1   &&&&MTDI Test Data In   &JTAG   &Debug, Free    \\\cline{1-8}
+GPIO42   &I=1   &&&&MTMS Test Mode Select   &JTAG   &Debug, Free    \\\cline{1-8}
+GPIO43   &I=1, WPU   &&&&U0\+TX   &UART0 TX   &USB-\/C    \\\cline{1-8}
+GPIO44   &I=1, WPU   &&&&U0\+RX   &UART0 RX   &USB-\/C    \\\cline{1-8}
+GPIO45   &I=1, WPD   &&&&&VDD\+\_\+\+SPI Voltage   &Is it usable?    \\\cline{1-8}
+GPIO46   &I=1, WPD   &&&&&BOOT   &/    \\\cline{1-8}
+GPIO47   &I=1   &&&&&&Buzzer    \\\cline{1-8}
+GPIO48   &I=1   &&&&&RGB BUILTIN   &WS2812B RGB   \\\cline{1-8}
 \end{longtabu}
 \hypertarget{gpio_pin_layout_page_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Hinweise}{Hinweise}}\label{gpio_pin_layout_page_autotoc_md17}
 
