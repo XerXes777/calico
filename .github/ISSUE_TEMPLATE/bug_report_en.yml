@@ -1,0 +1,46 @@
+name: Bug report (English)
+description: Report a bug to help improve the project
+labels: ['bug']
+assignees: 
+  - XerXes777
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! This helps keep the project stable and reliable.
+  - type: checkboxes
+    id: existing-bug
+    attributes:
+      label: Already reported?
+      description: Please check if the bug has already been reported.
+      options:
+        - label: I have searched existing issues
+          required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: What went wrong?
+      description: Describe what the bug is and what you expected instead.
+      placeholder: The LED should turn on, but it stays off when I press the start button.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to reproduce
+      description: How can the bug be reproduced?
+      placeholder: |
+        1. Flash firmware
+        2. Power on device
+        3. Press start button
+        4. Observe unexpected behavior
+    validations:
+      required: true
+  - type: input
+    id: software-version
+    attributes:
+      label: Project version
+      description: Which firmware/release version are you using?
+      placeholder: e.g. v1.2.3
+    validations:
+      required: true

@@ -1,0 +1,46 @@
+name: Bug melden (Deutsch)
+description: Melde einen Fehler, um das Projekt zu verbessern
+labels: ['bug']
+assignees: 
+  - XerXes777
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du einen Fehler meldest! So bleibt das Projekt stabil und zuverlässig.
+  - type: checkboxes
+    id: existing-bug
+    attributes:
+      label: Bereits gemeldet?
+      description: Bitte prüfe, ob dieser Fehler schon gemeldet wurde.
+      options:
+        - label: Ich habe nach bestehenden Issues gesucht
+          required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Was ist passiert?
+      description: Beschreibe den Fehler und was stattdessen passieren sollte.
+      placeholder: Die LED sollte angehen, aber sie bleibt aus, wenn ich den Startknopf drücke.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Schritte zur Reproduktion
+      description: Wie lässt sich der Fehler reproduzieren?
+      placeholder: |
+        1. Firmware flashen
+        2. Gerät einschalten
+        3. Startknopf drücken
+        4. Unerwartetes Verhalten beobachten
+    validations:
+      required: true
+  - type: input
+    id: software-version
+    attributes:
+      label: Projektversion
+      description: Welche Firmware-/Release-Version nutzt du?
+      placeholder: z. B. v1.2.3
+    validations:
+      required: true
